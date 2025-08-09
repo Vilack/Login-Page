@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <div class="form-box login-form active">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button>Login</button>
+    <p>Don't have an account? <span class="toggle">Sign up</span></p>
+  </div>
+
+  <div class="form-box signup-form">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Username" />
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Password" />
+    <button>Register</button>
+    <p>Already have an account? <span class="toggle">Login</span></p>
+  </div>
+</div>
+
+<script>
+  const toggles = document.querySelectorAll('.toggle');
+  const loginForm = document.querySelector('.login-form');
+  const signupForm = document.querySelector('.signup-form');
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      loginForm.classList.toggle('active');
+      signupForm.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
